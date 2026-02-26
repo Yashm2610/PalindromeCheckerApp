@@ -1,5 +1,5 @@
 /*
-  *UC2 Print a Hardcoded Palindrome Result
+  *UC3
   *@author Yash
   * Date:26/02/26
   *REG:RA2411026010263
@@ -11,13 +11,15 @@ public class PalindromeCheckerApp {
         boolean isPalindrome=true;
 
         int n=word.length()-1;
-        for(int i=0;i<word.length();i++)
+        int start=0;
+        for(int i=n;i>0;i--)
         {
-            if(word.charAt(i)!=word.charAt(n-i))
+            if(word.charAt(i)!=word.charAt(start))
             {
                 isPalindrome=false;
                 break;
             }
+            start++;
         }
         if(isPalindrome)
         {
