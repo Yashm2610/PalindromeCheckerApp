@@ -1,33 +1,43 @@
 /*
-  *UC3
-  *@author Yash
+  *UC4:Character Array Based Palindrome Check
+ *@author Yash
   * Date:26/02/26
   *REG:RA2411026010263
  */
 import java.util.*;
 public class PalindromeCheckerApp {
     public static void main(String[] args){
-        String word="madam";
-        boolean isPalindrome=true;
+        String input = "radar";
 
-        int n=word.length()-1;
-        int start=0;
-        for(int i=n;i>0;i--)
-        {
-            if(word.charAt(i)!=word.charAt(start))
-            {
-                isPalindrome=false;
+        // Convert to lowercase (optional safety)
+        input = input.toLowerCase();
+
+        // Convert String to char array
+        char[] characters = input.toCharArray();
+
+        // Two-pointer variables
+        int start = 0;
+        int end = characters.length - 1;
+
+        boolean isPalindrome = true;
+
+        // Two-pointer comparison
+        while (start < end) {
+            if (characters[start] != characters[end]) {
+                isPalindrome = false;
                 break;
             }
             start++;
+            end--;
         }
-        if(isPalindrome)
-        {
-            System.out.println(word+" is a Palindrome");
-        }
-        else
-        {
-            System.out.println(word+"is not a Palindrome");
+
+        // Output result
+        System.out.println("Input String: " + input);
+
+        if (isPalindrome) {
+            System.out.println("The given string is a Palindrome.");
+        } else {
+            System.out.println("The given string is NOT a Palindrome.");
         }
     }
 }
