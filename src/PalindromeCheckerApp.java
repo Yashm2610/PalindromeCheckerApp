@@ -1,16 +1,31 @@
 /*
-  *UC1 Palindrome Checker
-  *Application Entry & Welcome Message
-
-  *Description:Entry point of Palindrome Checker Management System
-
+  *UC2 Print a Hardcoded Palindrome Result
   *@author Yash
-  *@version 1.0
+  * Date:26/02/26
+  *REG:RA2411026010263
  */
+import java.util.*;
 public class PalindromeCheckerApp {
     public static void main(String[] args){
-        System.out.println("Welcome to Palindrome Checker Management System");
-        System.out.println("Version : 1.0");
-        System.out.println("System Initialized Successfully");
+        String word="madam";
+        boolean isPalindrome=true;
+
+        int n=word.length()-1;
+        for(int i=0;i<word.length();i++)
+        {
+            if(word.charAt(i)!=word.charAt(n-i))
+            {
+                isPalindrome=false;
+                break;
+            }
+        }
+        if(isPalindrome)
+        {
+            System.out.println(word+" is a Palindrome");
+        }
+        else
+        {
+            System.out.println(word+"is not a Palindrome");
+        }
     }
 }
