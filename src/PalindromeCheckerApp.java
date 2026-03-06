@@ -30,7 +30,7 @@ public class PalindromeCheckerApp {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter a string: ");
+        System.out.print("Enter a string : ");
         String input = sc.nextLine();
 
         // Create object of service class
